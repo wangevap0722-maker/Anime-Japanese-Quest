@@ -1,0 +1,125 @@
+
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>二次元日文任務所</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>🌸 二次元日文任務所</h1>
+        <p>Anime Japanese Quest</p>
+
+        <nav>
+            <a href="#home">首頁</a>
+            <a href="#vocabulary">單字冒險</a>
+            <a href="#grammar">文法修練</a>
+            <a href="#quiz">挑戰測驗</a>
+            <a href="#adventurer">冒險者紀錄</a>
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- 首頁 -->
+        <section id="home" class="hero">
+            <h2>歡迎來到日文冒險世界！</h2>
+            <p>透過有趣的任務，一起提升你的日文能力吧！</p>
+            <button onclick="startQuest()">開始冒險</button>
+        </section>
+
+        <!-- 冒險任務 -->
+        <section class="content">
+            <h2>📜 冒險任務</h2>
+
+            <div class="cards">
+
+                <!-- 單字冒險 -->
+                <div class="card" id="vocabulary">
+                    <h3>📖 單字冒險</h3>
+                    <p>每天學習一個日文單字！</p>
+
+                    <h2 id="word">桜</h2>
+                    <p id="kana">假名：さくら</p>
+                    <p id="meaning" hidden>🌸 櫻花</p>
+
+                    <button onclick="showMeaning()">查看中文意思</button>
+                    <button onclick="nextWord()">下一個單字</button>
+                </div>
+
+                <!-- 文法修練 -->
+                <div class="card" id="grammar">
+                    <h3>✨ 文法修練</h3>
+                    <p>挑戰 N1、N2 文法，提升日文實力！</p>
+
+                    <h2 id="grammarName">～わりに</h2>
+                    <p id="grammarMeaning">明明……卻……、與……相比</p>
+
+                    <p>例句：</p>
+                    <p id="grammarExample">この店は安いわりに、おいしいです。</p>
+                    <p id="grammarTranslation">這家店明明很便宜，卻很好吃。</p>
+
+                    <button onclick="nextGrammar()">下一個文法</button>
+                </div>
+
+                <!-- 挑戰測驗 -->
+                <div class="card" id="quiz">
+                    <h3>🎮 挑戰測驗</h3>
+                    <p>回答日文問題，挑戰自己的實力！</p>
+
+                    <h2 id="question">「猫」的中文意思是什麼？</h2>
+
+                    <div id="options">
+                        <button onclick="checkAnswer(0)">狗</button>
+                        <button onclick="checkAnswer(1)">貓</button>
+                        <button onclick="checkAnswer(2)">兔子</button>
+                    </div>
+
+                    <p id="result"></p>
+                    <p id="score">目前分數：0 分</p>
+
+                    <button onclick="nextQuestion()">下一題</button>
+                </div>
+
+                <!-- 冒險者紀錄 -->
+                <div class="card" id="adventurer">
+                    <h3>🏆 冒險者紀錄</h3>
+
+                    <h2 id="level">Lv. 1</h2>
+                    <p>目前等級</p>
+
+                    <h3 id="exp">EXP：0 / 30</h3>
+
+                    <!-- 經驗值進度條 -->
+                    <div class="exp-bar">
+                        <div id="expProgress" class="exp-progress"></div>
+                    </div>
+
+                    <p>答對題目即可獲得經驗值！</p>
+                    <p>🌟 努力升級，成為日文冒險大師！</p>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- 冒險者守則 -->
+        <section class="content">
+            <h2>🌟 冒險者守則</h2>
+            <p>每天學習一點日文，慢慢累積自己的實力！</p>
+            <p>完成任務，成為日文冒險大師！</p>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>© 2026 Anime Japanese Quest</p>
+        <p>讓日文學習變成一場冒險！</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
